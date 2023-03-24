@@ -152,7 +152,7 @@ function problemOne(){
     return results;
 }
 let vegetarianFood = problemOne();
-// console.log(vegetarianFood)
+console.log(vegetarianFood)
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
@@ -268,23 +268,41 @@ let ingreInclude = problemSix()
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
-// function problemEightA(){
-
-    let results;
-    results = dishes.map(function(cuisine){
-    return cuisine 
-})
-// let cuisineTypes = problemEightA()
+function problemEightA(){
+    let results = dishes.map(function (el) {
+        return el.cuisine;
+    })
+    return results
+}
+let cuisineTypes = problemEightA()
 // console.log(cuisineTypes)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
 
-
+function problemNine(){
+    let results = dishes.map(function (el) {
+        return el.cuisine + " " + el.name;
+    })
+    return results
+}
+let appendTypes = problemNine()
+// console.log(appendTypes)
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
+function problemTen(){
+    let vegType = problemOne()
+    console.log(vegType)
 
+    let results = vegType.map(function(el) {
+        return el.cuisine + " " + el.name
+    })
+    return results
+}
+
+let advFood = problemTen();
+console.log(advFood)
 
 
 
